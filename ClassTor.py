@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 
 import numpy as np
 import argparse
@@ -8,8 +8,27 @@ import classtor_spectrum as cs
 import classtor_classification as cc
 
 #########################################################################################
-#                   ClassTor - Classification of Torsion angle values
+"""
+                   ClassTor - Classification of Torsion angle values
+
+    ClassTor.py
+    Copyright (C) 2022 Maximilian Meixner
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+"""
 #########################################################################################
+
 # PARSE and PREP
 parser = argparse.ArgumentParser(prog='ClassTor (Classification of Torsion angle values)\n',
                                  description='generating gaussian-convoluted torsional distribution spectra'
@@ -67,6 +86,7 @@ parser.add_argument("-c", dest="Clustering", help="if specified, an additional h
 		    action='store_true')
 args = parser.parse_args()
 #########################################################################################
+
 # prep angle files
 all_torsion_angles = OrderedDict()  # 'a' : [angle-value, angle-value, ...]
 all_torsion_angles_xray = OrderedDict()
@@ -120,6 +140,7 @@ File format info:
 
 """
 #########################################################################################
+
 # OUTPUT FILE I: SUMMARY_SPECTRUM.LOG
 summary_spectrum = open('summary_spectrum_gk%d_t%d.log' % (args.GaussKern, args.Threshold), 'w')
 summary_spectrum.write("Characterization of distribution spectra: \n")
@@ -142,6 +163,7 @@ for torsion in all_torsion_angles:
        gaussian.write(str(element[0]) + '\t' + str(element[1]) + '\n')
     gaussian.close()
     #########################################################################################
+    
     # CHARACTERIZATION OF DISTRIBUTION SPECTRUM
     characterization = cs.SpectrumAnalysis(torsion, distribution_spectrum, args.Threshold)
     # add bin definition, midpoints and flexibility info to dictionaries for flexscore / classification / silhouette
@@ -190,6 +212,7 @@ for bin_number in flex_scores:
                                                str(flex_scores[bin_number][count][0]),
                                                str(flex_scores[bin_number][count][1])))
 #########################################################################################
+
 # CLASSIFICATION OF TORSION ANGLES
 # choose only flexible torsion for classification if specified via [-f]
 if args.Flexible:
@@ -230,6 +253,7 @@ else:
 classifier_length = (len(str(classification.classifiers[0]))+14)
 
 #########################################################################################
+
 # CLUSTERING OF CLASSIFICATION CENTROIDS (if -c is specified, the centroids of the 
 # previous classification results are used for hierarchical clusteringi and the 
 # respective info is added to the same output file III: summary_classification.log)
@@ -300,6 +324,7 @@ for ID in classification.classifiers:
 summary_classification.close()
 
 #########################################################################################
+
 # CLASSIFICATION done, the rest is additional output-file writing (heatmaps, gnuplot)
 # OUTPUT FILE IV: distance matrix for gnuplot
 # prepare centroids and file names (+headers) according to if args.Xray and / or args.Flexible are specified
