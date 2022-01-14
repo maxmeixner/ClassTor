@@ -56,7 +56,9 @@ subset extraction - ClassTors perturbational approach:\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "topdown": order is from highest to lowest populated class\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "reverse": order is from lowest to highest populated class
 
-
+# Getting started
+:red_circle: info about download and putting the modules in pythonpath to make them importable\
+explain requirements for ClassTor.py (a_angles.dat from e.g. cpptraj) :red_circle:
 
 
 # Citing ClassTor
