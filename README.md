@@ -63,11 +63,11 @@ subset extraction - ClassTors perturbational approach:\
 
 # Getting started
 :red_circle: info about download and putting the modules in pythonpath to make them importable\
-explain requirements for ClassTor.py (a_angles.dat from e.g. cpptraj) :red_circle:
+explain requirements for ClassTor.py (a_angles.dat from e.g. cpptraj)
 
 
 # Citing ClassTor
-tba
+:red_circle: tba
 
 # License
 ClassTor Copyright (C) 2022 Maximilian Meixner
