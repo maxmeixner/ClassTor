@@ -3,6 +3,12 @@ A python tool for Classification of Torsion angles
 
 ClassTor is a simple python tool for analysis and classification of sampled conformations of a ligand-sized molecule based on dihedral (torsion) angles. It consists of two python modules (classtor_spectrum.py, classtor_classification.py) and an executable analysis script (ClassTor.py), that uses these modules.
 
+# Usage
+./ClassTor.py *AngNum* [OPTION] 
+
+Mandatory argument:\
+*AngNum* integer number of torsion angles, must be the first argument
+
 # Citing ClassTor
 tba
 
