@@ -60,7 +60,8 @@ subset extraction - ClassTors perturbational approach:\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "reverse": order is from lowest to highest populated class
 
 clustering:\
--c &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; when specified, hierarchical agglomerative clustering is performed with centroid structures after classification. This is an alternative approach of generating a subset of conformers with size -ss from the classification results (default: not specified) 
+-c &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; when specified, hierarchical agglomerative clustering is performed with centroid structures\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; after classification. This is an alternative approach of generating a subset of conformers with size *-ss* from the classification results (default: not specified) 
 
 # Dependencies
 :red_circle:
