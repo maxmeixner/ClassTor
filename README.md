@@ -67,10 +67,12 @@ clustering:\
 # Dependencies
 :red_circle:
 
+# Installation
+:red_circle:
+
 # Getting started
 :red_circle: info about download and putting the modules in pythonpath to make them importable\
 explain requirements for ClassTor.py (a_angles.dat from e.g. cpptraj)
-
 
 # Citing ClassTor
 :red_circle: tba
