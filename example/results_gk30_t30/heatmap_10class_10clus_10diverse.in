@@ -1,0 +1,27 @@
+set size square 
+set multiplot 
+set pm3d map interpolate 0,0 
+unset key 
+
+set xrange[1:11] 
+set yrange[1:11] 
+set border linewidth 1.5 
+set arrow from first 1.5,1 to first 1.5,11 nohead front linecolor 'black' linewidth 1.5 
+set arrow from first 1,1.5 to first 11,1.5 nohead front linecolor 'black' linewidth 1.5 
+set xtics('x' 1, '1' 2, '2' 3, '3' 4, '4' 5, '5' 6, '6' 7, '7' 8, '8' 9, '9' 10, '10' 11) 
+set ytics('x' 1, '1' 2, '2' 3, '3' 4, '4' 5, '5' 6, '6' 7, '7' 8, '8' 9, '9' 10, '10' 11) 
+
+set cbrange [0:180] 
+set palette defined (0 'blue', 90 'white', 180 'red') 
+set colorbox 
+set tics scale 0.5 
+set cbtics out nomirror 
+set label "d-RMSD [{°}]" at 14,6 center rotate by -90 
+
+# 'using 1:2:3' plots highest populated class centroids 
+# if clustering was performed: 
+# 'using 1:2:4' plots clustering centroids, 'using 1:2:5' plots diverse centroids 
+# else: 'using 1:2:4' plots diverse centroids 
+splot 'RMS2TA_10class_10clus_10diverse.gnu' using 1:2:3 
+unset multiplot 
+quit 
