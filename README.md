@@ -1,3 +1,5 @@
+:red_circle: This software is still under development and curation. It is public for review purposes only and will be accessible as soon as published.
+
 # ClassTor
 A python tool for Classification of ligand conformations based on Torsion angles
 
@@ -65,10 +67,10 @@ clustering:\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; size *-ss* from the classification results (default: not specified) 
 
 # Dependencies
-:red_circle:
+:red_circle: tba
 
 # Installation
-:red_circle:
+:red_circle: tba
 
 # Getting started
 :red_circle: info about download and putting the modules in pythonpath to make them importable\
