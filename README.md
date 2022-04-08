@@ -67,14 +67,17 @@ clustering:\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; size *-ss* from the classification results (default: not specified) 
 
 # Dependencies
-:red_circle: tba
+Python 2.7.9
+numpy 1.16.6
+scikit-learn 0.20.4
+scipy 1.2.3
+matplotlib 2.2.5
 
 # Installation
-:red_circle: tba
-
-# Getting started
-:red_circle: info about download and putting the modules in pythonpath to make them importable\
-explain requirements for ClassTor.py (a_angles.dat from e.g. cpptraj)
+Download the analysis script (ClassTor.py) and the two module files (classtor_spectrum.py, classtor_classification.py). Place the module files in your python path. If unsure about the path, you can find out as follows:
+´´´pyhthon´´´
+import sys
+print sys.path
 
 # Citing ClassTor
 :red_circle: tba
