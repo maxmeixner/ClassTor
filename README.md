@@ -1,4 +1,4 @@
-:red_circle: This software is still under development and curation. It is public for review purposes only and will be accessible as soon as published.
+:red_circle: This repository is still under curation. It is public for review purposes only and will be accessible as soon as published.
 
 # ClassTor
 A python tool for Classification of ligand conformations based on Torsion angles
@@ -74,11 +74,11 @@ scipy 1.2.3\
 matplotlib 2.2.5
 
 # Installation
-Download the analysis script (ClassTor.py) and the two module files (classtor_spectrum.py, classtor_classification.py). Place the module files in your python path. If unsure about the path, you can find out as follows:
+Download the analysis script (ClassTor.py) and the two module files (classtor_spectrum.py, classtor_classification.py). Place the module files in your python path. If unsure about the path, you can find out as follows:\
 ```pyhthon```\
 ```import sys```\
 ```print sys.path```\
-The output should include something like .../site-packages/
+The output is a list of paths included in the python path. The module files are usually located in a directory called .../python2.7/site-packages/. 
 
 # Citing ClassTor
 :red_circle: tba
