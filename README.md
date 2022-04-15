@@ -1,5 +1,3 @@
-:red_circle: This repository is still under curation. It is public for review purposes only and will be accessible as soon as published.
-
 # ClassTor
 A python tool for Classification of ligand conformations based on Torsion angles
 
