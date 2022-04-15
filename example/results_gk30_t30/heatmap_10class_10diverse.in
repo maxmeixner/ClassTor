@@ -1,0 +1,48 @@
+set size square 
+set multiplot 
+set pm3d map interpolate 0,0 
+unset key 
+
+set xrange[1:11] 
+set yrange[1:11] 
+set border linewidth 1.5 
+ 
+#----LABELS---- 
+#change to 'class ID' if class id should be used, see tics 
+set xlabel 'frame ID' offset 0,(-0.5) 
+set ylabel 'frame ID' offset -1.5 
+ 
+set arrow from first 1.5,1 to first 1.5,11 nohead front linecolor 'black' linewidth 1.5 
+set arrow from first 1,1.5 to first 11,1.5 nohead front linecolor 'black' linewidth 1.5 
+ 
+#----TICS---- 
+#change according to which subset is plotted, see plot, select either frame id or class id 
+#frame id of first 10 class centroids 
+#set xtics('1001' 1, '534' 2, '754' 3, '228' 4, '865' 5, '666' 6, '421' 7, '779' 8, '740' 9, '846' 10, '36' 11,) rotate by 90 
+#set ytics('1001' 1, '534' 2, '754' 3, '228' 4, '865' 5, '666' 6, '421' 7, '779' 8, '740' 9, '846' 10, '36' 11,) 
+#class id of first 10 class centroids 
+#set xtics('x' 1, '1' 2, '2' 3, '3' 4, '4' 5, '5' 6, '6' 7, '7' 8, '8' 9, '9' 10, '10' 11,) rotate by 90 
+#set ytics('x' 1, '1' 2, '2' 3, '3' 4, '4' 5, '5' 6, '6' 7, '7' 8, '8' 9, '9' 10, '10' 11,) 
+#frame id of 10 diverse class centroids 
+set xtics('1001' 1, '554' 2, '239' 3, '676' 4, '328' 5, '636' 6, '128' 7, '865' 8, '977' 9, '459' 10, '639' 11,) rotate by 90 
+set ytics('1001' 1, '554' 2, '239' 3, '676' 4, '328' 5, '636' 6, '128' 7, '865' 8, '977' 9, '459' 10, '639' 11,) 
+#class id of 10 diverse class centroids 
+#set xtics('x' 1, '17' 2, '31' 3, '16' 4, '26' 5, '29' 6, '14' 7, '4' 8, '28' 9, '37' 10, '32' 11,) rotate by 90 
+#set ytics('x' 1, '17' 2, '31' 3, '16' 4, '26' 5, '29' 6, '14' 7, '4' 8, '28' 9, '37' 10, '32' 11,) 
+ 
+
+set cbrange [0:180] 
+set palette defined (0 'blue', 90 'white', 180 'red') 
+set colorbox 
+set tics scale 0.5 
+set cbtics out nomirror 
+set label "d-RMSD [°]" at 15.5,6 center rotate by -90 
+ 
+#----PLOT---- 
+# 'using 1:2:3' plots highest populated class centroids 
+# if clustering was performed: 
+# 'using 1:2:4' plots clustering centroids, 'using 1:2:5' plots diverse centroids 
+# else: 'using 1:2:4' plots diverse centroids 
+splot 'C:\Users\maxim\LRZ Sync+Share\Macrocycles\ClassTor_Documentation\GitHub_example\gk30_t30\RMS2TA_10class_10diverse.gnu' using 1:2:4 
+unset multiplot 
+quit 
