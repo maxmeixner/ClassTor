@@ -79,7 +79,7 @@ Download the analysis script (ClassTor.py) and the two module files (classtor_sp
 The output is a list of paths included in the python path. The module files are usually located in a directory called .../python2.7/site-packages/. 
 
 # Citing ClassTor
-:red_circle: tba
+Meixner, M., Zachmann, M., Metzler, S., Scheerer, J., Zacharias, M., & Antes, I. (2022). Dynamic Docking of Macrocycles in Bound and Unbound Protein Structures with DynaDock. *Journal of Chemical Information and Modeling*, *62*(14), 3426-3441.
 
 # License
 ClassTor Copyright (C) 2022 Maximilian Meixner
